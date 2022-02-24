@@ -1,0 +1,6 @@
+<button onclick="ws.send('RTconn');ws.send('RTstat')">Connect</button>&nbsp;&nbsp;
+<button onclick="ws.send('RTstat')">Status</button>&nbsp;&nbsp;
+<button onclick="ws.send('RTbank0')">Bank 0 (Flash)</button>&nbsp;&nbsp;
+<button onclick="ws.send('RTbank1')">Bank 1 (RAM)</button>&nbsp;&nbsp;
+<button onclick="ws.send('RTbank2');ws.send('RTstat')">Reset RAM</button><br><br>
+<input type="text" size="90" id="wsdata" value="80 38 12 34:01 02 03 04 05 06 07 "/><a href="javascript:ws.send(hexStringToByte(gE('#wsdata').value));ws.send('RTstat')"> Send</a>
